@@ -20,10 +20,6 @@ import javax.swing.JPanel;
 import org.jfree.chart.ChartPanel;
 import pseudoaleatorios.*;
 
-/**
- *
- * @author Dani
- */
 public class FrmPrincipal extends javax.swing.JFrame {
 
     String strDistribucion;

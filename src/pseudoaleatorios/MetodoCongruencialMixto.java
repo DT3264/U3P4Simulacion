@@ -10,10 +10,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashSet;
 
-/**
- *
- * @author Dani
- */
 public class MetodoCongruencialMixto implements Metodo{
     public static String parametros="Multiplicador=15\nConstante=20\nModulo=3\nSemilla=2";
     double multiplicador=15;

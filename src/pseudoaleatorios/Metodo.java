@@ -8,11 +8,6 @@ package pseudoaleatorios;
 import java.io.BufferedReader;
 import java.io.IOException;
 
-
-/**
- *
- * @author Dani
- */
 public interface Metodo {
     void init(BufferedReader reader) throws IOException;
     double obtenerSiguiente();

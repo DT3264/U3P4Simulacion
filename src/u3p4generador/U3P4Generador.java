@@ -8,10 +8,6 @@ package u3p4generador;
 import com.formdev.flatlaf.IntelliJTheme;
 import gui.FrmPrincipal;
 
-/**
- *
- * @author Dani
- */
 public class U3P4Generador {
 
     /**
