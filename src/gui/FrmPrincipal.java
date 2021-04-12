@@ -39,6 +39,8 @@ public class FrmPrincipal extends javax.swing.JFrame {
         setExtendedState(MAXIMIZED_BOTH);
         actualizaTituloPanel(panelParametros, "Parámetros");
         actualizaTituloPanel(panelGraficas, "Gráficas");
+        actualizaTituloPanel(panelContinuas, "Distribuciones continuas");
+        actualizaTituloPanel(panelDiscretas, "Distribuciones discretas");
     }
 
     /**
@@ -50,24 +52,28 @@ public class FrmPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        panelGrafica = new javax.swing.JPanel();
+        btnCreditos = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        panelContinuas = new javax.swing.JPanel();
+        btnDistBeta = new javax.swing.JButton();
         btnDistChiCuadrada = new javax.swing.JButton();
-        btnDistBinomial = new javax.swing.JButton();
         btnDistExponencial = new javax.swing.JButton();
         btnDistFFisher = new javax.swing.JButton();
         btnDistGamma = new javax.swing.JButton();
-        btnDistBinomialNegativa = new javax.swing.JButton();
-        btnDistGeometrica = new javax.swing.JButton();
-        btnDistHipergeometrica = new javax.swing.JButton();
         btnDistLognormal = new javax.swing.JButton();
         btnDistNormal = new javax.swing.JButton();
-        btnDistPoisson = new javax.swing.JButton();
         btnDistStudentT = new javax.swing.JButton();
         btnDistUniforme = new javax.swing.JButton();
         btnDistWeibull = new javax.swing.JButton();
-        btnDistBeta = new javax.swing.JButton();
-        separadorBotonesParams = new javax.swing.JSeparator();
-        jSeparator1 = new javax.swing.JSeparator();
-        panelGrafica = new javax.swing.JPanel();
+        panelDiscretas = new javax.swing.JPanel();
+        btnDistBinomial = new javax.swing.JButton();
+        btnDistBinomialNegativa = new javax.swing.JButton();
+        btnDistGeometrica = new javax.swing.JButton();
+        btnDistHipergeometrica = new javax.swing.JButton();
+        btnDistPoisson = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        btnExportarPseudoaleatorios = new javax.swing.JButton();
         panelParametros = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         txtParams = new javax.swing.JTextArea();
@@ -82,24 +88,46 @@ public class FrmPrincipal extends javax.swing.JFrame {
         btnDensidad = new javax.swing.JButton();
         btnAcumulada = new javax.swing.JButton();
         btnInversa = new javax.swing.JButton();
-        btnExportarDatos = new javax.swing.JButton();
-        btnCreditos = new javax.swing.JButton();
+        btnExportarInversa = new javax.swing.JButton();
+        btnExportarAcumulada = new javax.swing.JButton();
+        btnExportarDensidad = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        javax.swing.GroupLayout panelGraficaLayout = new javax.swing.GroupLayout(panelGrafica);
+        panelGrafica.setLayout(panelGraficaLayout);
+        panelGraficaLayout.setHorizontalGroup(
+            panelGraficaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 224, Short.MAX_VALUE)
+        );
+        panelGraficaLayout.setVerticalGroup(
+            panelGraficaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        btnCreditos.setText("Créditos");
+        btnCreditos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCreditosActionPerformed(evt);
+            }
+        });
+
+        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        btnDistBeta.setText("Distribución Beta");
+        btnDistBeta.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btnDistBeta.setPreferredSize(new java.awt.Dimension(170, 32));
+        btnDistBeta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDistBetaActionPerformed(evt);
+            }
+        });
 
         btnDistChiCuadrada.setText("Distribución Chi-Cuadrada");
         btnDistChiCuadrada.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btnDistChiCuadrada.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDistChiCuadradaActionPerformed(evt);
-            }
-        });
-
-        btnDistBinomial.setText("Distribucion Binomial");
-        btnDistBinomial.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        btnDistBinomial.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDistBinomialActionPerformed(evt);
             }
         });
 
@@ -129,33 +157,6 @@ public class FrmPrincipal extends javax.swing.JFrame {
             }
         });
 
-        btnDistBinomialNegativa.setText("Distribución Binomial Negativa");
-        btnDistBinomialNegativa.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        btnDistBinomialNegativa.setPreferredSize(new java.awt.Dimension(170, 32));
-        btnDistBinomialNegativa.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDistBinomialNegativaActionPerformed(evt);
-            }
-        });
-
-        btnDistGeometrica.setText("Distribución Geométrica");
-        btnDistGeometrica.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        btnDistGeometrica.setPreferredSize(new java.awt.Dimension(170, 32));
-        btnDistGeometrica.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDistGeometricaActionPerformed(evt);
-            }
-        });
-
-        btnDistHipergeometrica.setText("Distribución Hipergeométrica");
-        btnDistHipergeometrica.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        btnDistHipergeometrica.setPreferredSize(new java.awt.Dimension(170, 32));
-        btnDistHipergeometrica.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDistHipergeometricaActionPerformed(evt);
-            }
-        });
-
         btnDistLognormal.setText("Distribución Lognormal");
         btnDistLognormal.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btnDistLognormal.setPreferredSize(new java.awt.Dimension(170, 32));
@@ -171,15 +172,6 @@ public class FrmPrincipal extends javax.swing.JFrame {
         btnDistNormal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDistNormalActionPerformed(evt);
-            }
-        });
-
-        btnDistPoisson.setText("Distribución Poisson");
-        btnDistPoisson.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        btnDistPoisson.setPreferredSize(new java.awt.Dimension(170, 32));
-        btnDistPoisson.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDistPoissonActionPerformed(evt);
             }
         });
 
@@ -210,30 +202,154 @@ public class FrmPrincipal extends javax.swing.JFrame {
             }
         });
 
-        btnDistBeta.setText("Distribución Beta");
-        btnDistBeta.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        btnDistBeta.setPreferredSize(new java.awt.Dimension(170, 32));
-        btnDistBeta.addActionListener(new java.awt.event.ActionListener() {
+        javax.swing.GroupLayout panelContinuasLayout = new javax.swing.GroupLayout(panelContinuas);
+        panelContinuas.setLayout(panelContinuasLayout);
+        panelContinuasLayout.setHorizontalGroup(
+            panelContinuasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelContinuasLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panelContinuasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnDistWeibull, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnDistUniforme, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnDistStudentT, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnDistBeta, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnDistChiCuadrada, javax.swing.GroupLayout.DEFAULT_SIZE, 202, Short.MAX_VALUE)
+                    .addComponent(btnDistExponencial, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnDistFFisher, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnDistGamma, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnDistLognormal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnDistNormal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        panelContinuasLayout.setVerticalGroup(
+            panelContinuasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelContinuasLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btnDistBeta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnDistChiCuadrada)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnDistExponencial)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnDistFFisher, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnDistGamma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnDistLognormal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnDistNormal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnDistStudentT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnDistUniforme, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnDistWeibull, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        btnDistBinomial.setText("Distribucion Binomial");
+        btnDistBinomial.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btnDistBinomial.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDistBetaActionPerformed(evt);
+                btnDistBinomialActionPerformed(evt);
             }
         });
 
-        separadorBotonesParams.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        btnDistBinomialNegativa.setText("Distribución Binomial Negativa");
+        btnDistBinomialNegativa.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btnDistBinomialNegativa.setPreferredSize(new java.awt.Dimension(170, 32));
+        btnDistBinomialNegativa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDistBinomialNegativaActionPerformed(evt);
+            }
+        });
 
-        jSeparator1.setBackground(new java.awt.Color(255, 102, 51));
-        jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        btnDistGeometrica.setText("Distribución Geométrica");
+        btnDistGeometrica.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btnDistGeometrica.setPreferredSize(new java.awt.Dimension(170, 32));
+        btnDistGeometrica.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDistGeometricaActionPerformed(evt);
+            }
+        });
 
-        javax.swing.GroupLayout panelGraficaLayout = new javax.swing.GroupLayout(panelGrafica);
-        panelGrafica.setLayout(panelGraficaLayout);
-        panelGraficaLayout.setHorizontalGroup(
-            panelGraficaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 150, Short.MAX_VALUE)
+        btnDistHipergeometrica.setText("Distribución Hipergeométrica");
+        btnDistHipergeometrica.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btnDistHipergeometrica.setPreferredSize(new java.awt.Dimension(170, 32));
+        btnDistHipergeometrica.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDistHipergeometricaActionPerformed(evt);
+            }
+        });
+
+        btnDistPoisson.setText("Distribución Poisson");
+        btnDistPoisson.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btnDistPoisson.setPreferredSize(new java.awt.Dimension(170, 32));
+        btnDistPoisson.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDistPoissonActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout panelDiscretasLayout = new javax.swing.GroupLayout(panelDiscretas);
+        panelDiscretas.setLayout(panelDiscretasLayout);
+        panelDiscretasLayout.setHorizontalGroup(
+            panelDiscretasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelDiscretasLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panelDiscretasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnDistGeometrica, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnDistHipergeometrica, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnDistPoisson, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnDistBinomialNegativa, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnDistBinomial, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
-        panelGraficaLayout.setVerticalGroup(
-            panelGraficaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+        panelDiscretasLayout.setVerticalGroup(
+            panelDiscretasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelDiscretasLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btnDistBinomial)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnDistBinomialNegativa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnDistGeometrica, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnDistHipergeometrica, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnDistPoisson, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(panelDiscretas, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(panelContinuas, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(panelContinuas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(panelDiscretas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        btnExportarPseudoaleatorios.setText("Exportar pseudoaleatorios generados");
+        btnExportarPseudoaleatorios.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExportarPseudoaleatoriosActionPerformed(evt);
+            }
+        });
 
         txtParams.setColumns(20);
         txtParams.setRows(5);
@@ -299,12 +415,11 @@ public class FrmPrincipal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(panelParametrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(btnRegeneraRandom, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(panelParametrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(panelParamsRandom, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jScrollPane1)
-                        .addComponent(btnActualizaDistribucion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(chkRandomCongruenciales, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap(9, Short.MAX_VALUE))
+                    .addComponent(panelParamsRandom, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnActualizaDistribucion, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(chkRandomCongruenciales, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelParametrosLayout.setVerticalGroup(
             panelParametrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -365,19 +480,63 @@ public class FrmPrincipal extends javax.swing.JFrame {
                 .addComponent(btnInversa))
         );
 
-        btnExportarDatos.setText("Exportar datos");
-        btnExportarDatos.addActionListener(new java.awt.event.ActionListener() {
+        btnExportarInversa.setText("Exportar valores para inversa");
+        btnExportarInversa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnExportarDatosActionPerformed(evt);
+                btnExportarInversaActionPerformed(evt);
             }
         });
 
-        btnCreditos.setText("Créditos");
-        btnCreditos.addActionListener(new java.awt.event.ActionListener() {
+        btnExportarAcumulada.setText("Exportar valores para acumulada");
+        btnExportarAcumulada.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCreditosActionPerformed(evt);
+                btnExportarAcumuladaActionPerformed(evt);
             }
         });
+
+        btnExportarDensidad.setText("Exportar valores para densidad");
+        btnExportarDensidad.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExportarDensidadActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(panelGraficas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(panelParametros, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btnExportarPseudoaleatorios, javax.swing.GroupLayout.DEFAULT_SIZE, 287, Short.MAX_VALUE)
+                            .addComponent(btnExportarInversa, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnExportarDensidad, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnExportarAcumulada, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap())
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(panelParametros, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(panelGraficas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnExportarDensidad)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnExportarAcumulada)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnExportarInversa)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnExportarPseudoaleatorios)
+                .addContainerGap())
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -385,32 +544,11 @@ public class FrmPrincipal extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnDistChiCuadrada, javax.swing.GroupLayout.DEFAULT_SIZE, 202, Short.MAX_VALUE)
-                    .addComponent(btnDistBinomial, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnDistExponencial, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnDistFFisher, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnDistGamma, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnDistGeometrica, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnDistBinomialNegativa, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnDistHipergeometrica, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnDistLognormal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnDistNormal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnDistPoisson, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnDistStudentT, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnDistUniforme, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnDistWeibull, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnDistBeta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnCreditos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(separadorBotonesParams, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnExportarDatos, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(panelGraficas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(panelParametros, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnCreditos, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(panelGrafica, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
@@ -420,49 +558,12 @@ public class FrmPrincipal extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(separadorBotonesParams)
-                    .addComponent(jSeparator1)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(panelGrafica, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(panelParametros, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(panelGraficas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(btnDistBinomial)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnDistBinomialNegativa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnDistBeta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnDistChiCuadrada)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnDistExponencial)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnDistFFisher, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnDistGamma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnDistGeometrica, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnDistHipergeometrica, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnDistLognormal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnDistNormal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnDistPoisson, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnDistStudentT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnDistUniforme, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnDistWeibull, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnCreditos, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(btnExportarDatos, javax.swing.GroupLayout.Alignment.TRAILING))))
+                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnCreditos)))
                 .addContainerGap())
         );
 
@@ -545,8 +646,10 @@ public class FrmPrincipal extends javax.swing.JFrame {
         distBase.metodoRand = metodoRand;
         if (distBase.esContinua) {
             btnDensidad.setText("Densidad");
+            btnExportarDensidad.setText("Exportar valores para densidad");
         } else {
             btnDensidad.setText("Masa");
+            btnExportarDensidad.setText("Exportar valores para masa");
         }
         muestraMensaje("Distribución actualizada correctamente");
     }
@@ -684,34 +787,86 @@ public class FrmPrincipal extends javax.swing.JFrame {
         muestraMensaje(mensaje);
     }//GEN-LAST:event_btnCreditosActionPerformed
 
-    private void btnExportarDatosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExportarDatosActionPerformed
-        if (!existeDistBase()) {
+    private void btnExportarPseudoaleatoriosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExportarPseudoaleatoriosActionPerformed
+        if (!existeDistBase()) return;
+        String nombreArchivo=JOptionPane.showInputDialog("Ingrese el nombre del archivo sin extensión");
+        if(nombreArchivo==null) return;
+        if(nombreArchivo.isEmpty()){
+            muestraMensaje("No se ingresó un nombre");
             return;
         }
-        if(distBase.getX()==null){
-            muestraMensaje("No se han generado datos para una distribución previamente.");
-        }
+        double x[]=distBase.getX();
+        exporta(nombreArchivo, new double[][]{x}, "");
+    }//GEN-LAST:event_btnExportarPseudoaleatoriosActionPerformed
+
+    private void btnExportarDensidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExportarDensidadActionPerformed
+        if (!existeDistBase()) return;
         String nombreArchivo=JOptionPane.showInputDialog("Ingrese el nombre del archivo sin extensión");
+        if(nombreArchivo==null) return;
+        if(nombreArchivo.isEmpty()){
+            muestraMensaje("No se ingresó un nombre");
+            return;
+        }
+        distBase.densidad();
+        double x[]=distBase.getX();
+        double y[]=distBase.getY();
+        exporta(nombreArchivo, new double[][]{x, y}, (distBase.esContinua ? " densidad" : " masa"));
+    }//GEN-LAST:event_btnExportarDensidadActionPerformed
+
+    private void btnExportarAcumuladaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExportarAcumuladaActionPerformed
+        if (!existeDistBase()) return;
+        String nombreArchivo=JOptionPane.showInputDialog("Ingrese el nombre del archivo sin extensión");
+        if(nombreArchivo==null) return;
+        if(nombreArchivo.isEmpty()){
+            muestraMensaje("No se ingresó un nombre");
+            return;
+        }
+        distBase.acumulada();
+        double x[]=distBase.getX();
+        double y[]=distBase.getY();
+        exporta(nombreArchivo, new double[][]{x, y}, "acumulada");
+    }//GEN-LAST:event_btnExportarAcumuladaActionPerformed
+
+    private void btnExportarInversaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExportarInversaActionPerformed
+        if (!existeDistBase()) return;
+        String nombreArchivo=JOptionPane.showInputDialog("Ingrese el nombre del archivo sin extensión");
+        if(nombreArchivo==null) return;
+        if(nombreArchivo.isEmpty()){
+            muestraMensaje("No se ingresó un nombre");
+            return;
+        }
+        distBase.inversa();
+        double x[]=distBase.getX();
+        double y[]=distBase.getY();
+        exporta(nombreArchivo, new double[][]{x, y}, "inversa");
+    }//GEN-LAST:event_btnExportarInversaActionPerformed
+
+    
+    private void exporta(String nombreArchivo, double[][] valores, String funcion){
         String ruta=nombreArchivo+".csv";
         File file;
         PrintWriter writer;
         try {
             file=new File(ruta);
             writer = new PrintWriter(ruta);
-            double x[]=distBase.getX();
-            double y[]=distBase.getY();
-            for (int i=0; i<x.length; i++) {
-                writer.printf("%.6f, %.6f\n", x[i], y[i]);
+            for (int i=0; i<valores[0].length; i++) {
+                if(valores.length==1){
+                    writer.printf("%.6f\n", valores[0][i]);
+                }
+                else{
+                    writer.printf("%.6f, %.6f\n", valores[0][i], valores[1][i]);
+                }
             }
+            
             writer.flush();
             writer.close();
             String rutaCompleta=file.getAbsoluteFile().getPath();
-            muestraMensaje("Escritos " + x.length + " registros en " + rutaCompleta);
+            String extra = (funcion.equals("") ? ("de la función: " + funcion) : "pseudoaleatorios");
+            muestraMensaje("Escritos " + valores[0].length + " registros " + extra + " en " + rutaCompleta);
         } catch (FileNotFoundException ex) {
             Logger.getLogger(FrmPrincipal.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }//GEN-LAST:event_btnExportarDatosActionPerformed
-
+    }
     private void muestraMensaje(String mensaje) {
         JOptionPane.showMessageDialog(this, mensaje);
     }
@@ -787,19 +942,24 @@ public class FrmPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton btnDistStudentT;
     private javax.swing.JButton btnDistUniforme;
     private javax.swing.JButton btnDistWeibull;
-    private javax.swing.JButton btnExportarDatos;
+    private javax.swing.JButton btnExportarAcumulada;
+    private javax.swing.JButton btnExportarDensidad;
+    private javax.swing.JButton btnExportarInversa;
+    private javax.swing.JButton btnExportarPseudoaleatorios;
     private javax.swing.JButton btnInversa;
     private javax.swing.JButton btnRegeneraRandom;
     private javax.swing.JCheckBox chkRandomCongruenciales;
     private javax.swing.JComboBox<String> cmbMetodo;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JPanel panelContinuas;
+    private javax.swing.JPanel panelDiscretas;
     private javax.swing.JPanel panelGrafica;
     private javax.swing.JPanel panelGraficas;
     private javax.swing.JPanel panelParametros;
     private javax.swing.JPanel panelParamsRandom;
-    private javax.swing.JSeparator separadorBotonesParams;
     private javax.swing.JTextArea txtParams;
     private javax.swing.JTextArea txtParamsRandom;
     // End of variables declaration//GEN-END:variables
